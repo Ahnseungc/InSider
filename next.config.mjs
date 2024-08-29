@@ -1,14 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
-  distDir: ".next",
+  distDir: '.next',
 
   webpack(config) {
-    const prod = process.env.NODE_ENV === "production";
+    // svg
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
+    const prod = process.env.NODE_ENV === 'production';
 
     return {
       ...config,
-      mode: prod ? "production" : "development",
+      mode: prod ? 'production' : 'development',
     };
   },
 };
