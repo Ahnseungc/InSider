@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Header } from '@/components/layouts/header';
 import { Footer } from '@/components/layouts/footer';
+import { SideBar } from '@/components/layouts/sidebar';
 
 import './globals.css';
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
         <Header />
+        <SideBar />
         {children}
         <Footer />
       </body>

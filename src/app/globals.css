@@ -17,6 +17,10 @@
 }
 
 body {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
