@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import { Header } from '@/components/layouts/header';
 
-const inter = Inter({ subsets: ['latin'] });
+import './globals.css';
 
 export const metadata: Metadata = {
   title: '인사이더',
@@ -16,7 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+        />
+      </head>
+      <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

@@ -18,7 +18,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true, // JSX 구문을 지원
+      jsx: true, //  구문을 지원
     },
   },
   plugins: ['import', 'react', '@typescript-eslint', 'prettier'],
