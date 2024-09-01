@@ -17,11 +17,11 @@
 }
 
 body {
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none; */
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 @layer utilities {
   .text-balance {

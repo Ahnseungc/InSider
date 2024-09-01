@@ -1,5 +1,4 @@
 import { WidthLine } from '@/components/common/Icon';
-import { VerticalLine } from '@/components/common/Icon';
 import {
   Employment,
   Relationship,
@@ -37,8 +36,8 @@ const iconComponents: IconComponents = {
 
 export const SideBar = () => {
   return (
-    <nav className="fixed left-[28px] pt-[47px] h-100 flex w-[243px] overflow-y-scroll scrollbar-hidden">
-      <div className="flex flex-col gap-8 items-center">
+    <aside className="relative pl-[28px] flex scrollbar-hidden gap-[26px]">
+      <div className="flex flex-col gap-8 items-center pt-[47px]">
         <div className="w-full">
           <p className="text-[15px] text-left text-[#7e7e7e] mb-[24px]">
             <span className="text-[15px] font-bold text-left text-main">
@@ -58,7 +57,7 @@ export const SideBar = () => {
                       {item.name}
                     </span>
                   </div>
-                  <span className="absolute right-0">
+                  <span className="absolute right-[32px]">
                     {RenderIcon(item.status, iconComponents)}
                   </span>
                 </div>
@@ -104,11 +103,8 @@ export const SideBar = () => {
           </div>
         </div>
       </div>
-
-      <div className="absolute right-0 top-0">
-        <VerticalLine />
-      </div>
-    </nav>
+      <div className="w-[1px] bg-[#A6A6A6]"></div>
+    </aside>
   );
 };
 

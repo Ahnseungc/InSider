@@ -17,6 +17,9 @@ const config: Config = {
       boxShadow: {
         header: '0px 4px 10px 3px rgba(0,0,0,0.07)',
       },
+      maxWidth: {
+        mainsection: '1340px',
+      },
     },
   },
   plugins: [tailwindScrollbar],

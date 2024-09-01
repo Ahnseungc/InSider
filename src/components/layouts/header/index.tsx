@@ -11,7 +11,7 @@ import { FindIcon } from '@/components/common/Icon';
 export const Header: FC = () => {
   const login = 'logOut';
   return (
-    <header className="flex w-100 h-20 items-center justify-between shadow-header sticky px-8">
+    <header className="flex w-100 h-20 items-center justify-between shadow-header sticky px-8 z-1">
       <p className="text-[29px] font-pretendard font-black text-main">
         INSINDER
       </p>
