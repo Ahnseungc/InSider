@@ -1,3 +1,9 @@
+import { FC } from 'react';
+
+type ArrowProps = {
+  active: boolean;
+};
+
 export const FindIcon = () => {
   return (
     <svg
@@ -504,6 +510,50 @@ export const Down = () => {
       preserveAspectRatio="none"
     >
       <path d="M0 0L5 4.5L9.5 0H0Z" fill="#3776B8"></path>
+    </svg>
+  );
+};
+
+export const LeftArrow: FC<ArrowProps> = ({ active }) => {
+  return (
+    <svg
+      width="70"
+      height="70"
+      viewBox="0 0 70 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-[70px] h-[70px] relative"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <path
+        d="M44.3652 53.2395L26.6188 35.4931L44.3652 17.7466"
+        stroke={active ? '#FF5C00' : '#D0D0D0'}
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
+    </svg>
+  );
+};
+
+export const RightArrow: FC<ArrowProps> = ({ active }) => {
+  return (
+    <svg
+      width="70"
+      height="70"
+      viewBox="0 0 70 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-[70px] h-[70px] relative"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <path
+        d="M25.6348 53.2395L43.3812 35.4931L25.6348 17.7466"
+        stroke={active ? '#FF5C00' : '#D0D0D0'}
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
     </svg>
   );
 };

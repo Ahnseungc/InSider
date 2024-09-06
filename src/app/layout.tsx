@@ -26,12 +26,14 @@ export default function RootLayout({
       <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
         <main className="flex-col h-max">
           <Header />
-          <div className="flex h-full ">
+          <div className="flex h-full">
             <SideBar />
-            <div className="flex-1">{children}</div>
+            <div className="mt-24">
+              {children}
+              <Footer />
+            </div>
           </div>
         </main>
-        <Footer />
       </body>
     </html>
   );
