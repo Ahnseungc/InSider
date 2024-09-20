@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { TopicList } from './weekTopic/topicList';
 import { RankingList } from './InsiderRanking/rankingList';
+import { NextTopicList } from './nextTopic/nextTopicList';
 import { LeftArrow, RightArrow } from '@/components/common/Icon';
 
 export const MainArticle: FC = () => {
@@ -44,7 +45,9 @@ export const MainArticle: FC = () => {
                 선정에 반영됩니다.(최대 세 번 투표 가능합니다.)
               </p>
             </header>
-            <article className="mt-[50px]"></article>
+            <article className="mt-[50px]">
+              <NextTopicList />
+            </article>
             <footer></footer>
           </div>
         </section>
