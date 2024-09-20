@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { TopicList } from './weekTopic/topicList';
+import { RankingList } from './InsiderRanking/rankingList';
 import { LeftArrow, RightArrow } from '@/components/common/Icon';
 
 export const MainArticle: FC = () => {
   return (
-    <div className="w-full flex flex-col items-center pt-[88px] pl-[19px]">
+    <div className="w-full flex flex-col items-center pt-[40px] pl-[19px]">
       <div className="max-w-mainsection">
         <section>
           <div>
@@ -24,16 +25,16 @@ export const MainArticle: FC = () => {
             <RightArrow active={false} />
           </article>
 
-          <div className="pl-[76px] mt-[120px]">
+          <div className="pl-[76px] mt-[48px]">
             <header className="">
               <h1 className="text-[24px] font-bold text-left text-[#202020] ">
                 인싸이더 랭킹
               </h1>
             </header>
-            <article className="mt-[50px]">마진</article>
+            <article className="mt-[50px]">{<RankingList />}</article>
             <footer></footer>
           </div>
-          <div className="pl-[76px] mt-[120px]">
+          <div className="pl-[76px] mt-[49px]">
             <header className="">
               <h1 className="text-[24px] font-bold text-left text-[#202020] ">
                 다음주 토론 주제 투표
