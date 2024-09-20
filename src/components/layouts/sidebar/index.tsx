@@ -36,7 +36,7 @@ const iconComponents: IconComponents = {
 
 export const SideBar = () => {
   return (
-    <aside className="relative pl-[28px] flex scrollbar-hidden gap-[26px]">
+    <aside className="fixed pl-[28px] flex scrollbar-hidden gap-[26px] h-screen">
       <div className="flex flex-col gap-8 items-center pt-[47px]">
         <div className="w-full">
           <p className="text-[15px] text-left text-[#7e7e7e] mb-[24px]">

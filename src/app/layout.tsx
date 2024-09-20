@@ -23,16 +23,15 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
         />
       </head>
-      <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
-        <main className="flex-col h-max">
+      <body
+        style={{ fontFamily: 'Pretendard, sans-serif' }}
+        className="h-screen"
+      >
+        <main className="h-screen">
           <Header />
-          <div className="flex h-full">
-            <SideBar />
-            <div className="">
-              {children}
-              <Footer />
-            </div>
-          </div>
+          <SideBar />
+          <div className="flex w-screen justify-center">{children}</div>
+          <Footer />
         </main>
       </body>
     </html>
