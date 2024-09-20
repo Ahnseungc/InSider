@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { TopicList } from './weekTopic/topicList';
 import { RankingList } from './InsiderRanking/rankingList';
 import { NextTopicList } from './nextTopic/nextTopicList';
+import { TopicDashBoardList } from './topicDashboard/TopicDashBoardList';
 import { LeftArrow, RightArrow } from '@/components/common/Icon';
 
 export const MainArticle: FC = () => {
@@ -48,7 +49,23 @@ export const MainArticle: FC = () => {
             <article className="mt-[50px]">
               <NextTopicList />
             </article>
-            <footer></footer>
+            <footer className="w-full flex justify-center mt-[20px]">
+              <button className="w-[305px] h-[71px] rounded-[10px] bg-[#ff5c00]">
+                <span className="text-lg font-bold text-left text-white">
+                  선택하고 투표현황 보기
+                </span>
+              </button>
+            </footer>
+          </div>
+          <div className="pl-[76px] mt-[49px]">
+            <header className="">
+              <h1 className="text-[24px] font-bold text-left text-[#202020] ">
+                토론 게시판
+              </h1>
+            </header>
+            <article className="mt-[50px]">
+              <TopicDashBoardList />
+            </article>
           </div>
         </section>
       </div>
