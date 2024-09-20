@@ -3,6 +3,7 @@ import { TopicList } from './weekTopic/topicList';
 import { RankingList } from './InsiderRanking/rankingList';
 import { NextTopicList } from './nextTopic/nextTopicList';
 import { TopicDashBoardList } from './topicDashboard/TopicDashBoardList';
+import { HealingList } from './healing/healingList';
 import { LeftArrow, RightArrow } from '@/components/common/Icon';
 
 export const MainArticle: FC = () => {
@@ -63,8 +64,18 @@ export const MainArticle: FC = () => {
                 토론 게시판
               </h1>
             </header>
-            <article className="mt-[50px]">
+            <article className="mt-[28px]">
               <TopicDashBoardList />
+            </article>
+          </div>
+          <div className="pl-[76px] mt-[49px]">
+            <header className="">
+              <h1 className="text-[24px] font-bold text-left text-[#202020] ">
+                힐링 추천
+              </h1>
+            </header>
+            <article className="mt-[28px]">
+              <HealingList />
             </article>
           </div>
         </section>
