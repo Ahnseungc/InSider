@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Line } from '@/components/common/Icon';
 import Link from 'next/link';
+import { Line } from '@/components/common/Icon';
 
 const LogOutHeader: FC = () => {
   return (
