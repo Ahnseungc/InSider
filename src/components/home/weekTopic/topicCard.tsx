@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FC } from 'react';
 
 export const TopicCard: FC = () => {
@@ -13,11 +14,13 @@ export const TopicCard: FC = () => {
           시행해야한다’에 대한 찬반..
         </span>
       </p>
-      <button className="w-[193px] h-[49px] rounded-lg bg-main flex items-center justify-center mt-[28px]">
-        <p className="text-base font-bold text-left text-white">
-          토큰 페이지로 이동하기
-        </p>
-      </button>
+      <Link href={'/post/discussion'}>
+        <button className="w-[193px] h-[49px] rounded-lg bg-main flex items-center justify-center mt-[28px]">
+          <p className="text-base font-bold text-left text-white">
+            토론 페이지로 이동하기
+          </p>
+        </button>
+      </Link>
     </div>
   );
 };

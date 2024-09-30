@@ -26,7 +26,7 @@ export default function RootLayout({
       <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
         <main className="h-screen pt-[80px]">
           <Header />
-          <div className="flex flex-1">
+          <div className="flex flex-1 ">
             <SideBar />
             <div className="flex overflow-y-auto">{children}</div>
           </div>
