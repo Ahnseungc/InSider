@@ -7,14 +7,28 @@ import LogOutHeader from './LogOutHeader';
 import { LoginType } from '@/models';
 import { Input } from '@/components/common/input';
 import { FindIcon } from '@/components/common/Icon';
+import { InsiderLogo } from '@/components/common/Icon';
+import { useRouter } from 'next/navigation';
 
 export const Header: FC = () => {
   const login = 'logOut';
+  const router = useRouter();
+
+  const handleHome = () => {
+    router.push('/');
+  };
   return (
     <header className="flex w-screen h-20 items-center justify-between shadow-header fixed px-8 z-100 top-0 bg-white">
-      <p className="text-[29px] font-pretendard font-black text-main">
-        INSINDER
-      </p>
+      <div
+        className="flex items-center gap-[10px] cursor-pointer"
+        onClick={handleHome}
+      >
+        <InsiderLogo />
+        <p className="text-[29px] font-pretendard font-black text-main">
+          INSINDER
+        </p>
+      </div>
+
       <div className="w-[557px] h-12 relative">
         <div className="absolute top-1/2 left-[24px] transform -translate-y-1/2">
           <FindIcon />

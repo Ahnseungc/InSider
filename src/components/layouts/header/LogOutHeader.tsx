@@ -5,7 +5,9 @@ import { Line } from '@/components/common/Icon';
 const LogOutHeader: FC = () => {
   return (
     <div className="flex gap-[20px] items-center">
-      <p className="text-lg font-semibold text-left text-[#4b4b4b]">로그인</p>
+      <Link href={'/login'}>
+        <p className="text-lg font-semibold text-left text-[#4b4b4b]">로그인</p>
+      </Link>
       <Line />
       <Link href={'/signup'}>
         <p className="text-lg font-semibold text-left text-[#4b4b4b] cursor-pointer">
