@@ -15,9 +15,11 @@ const LogOutHeader: FC = () => {
         </p>
       </Link>
       <Line />
-      <p className="text-lg font-semibold text-left text-[#4b4b4b]">
-        메인 페이지
-      </p>
+      <Link href={'/'}>
+        <p className="text-lg font-semibold text-left text-[#4b4b4b] cursor-pointer">
+          메인 페이지
+        </p>
+      </Link>
     </div>
   );
 };

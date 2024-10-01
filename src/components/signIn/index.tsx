@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { GoogleLogin } from '../common/Icon';
+import { LoginCircle } from '../common/Icon';
 
 const SignInPage = () => {
   return (
@@ -92,9 +92,9 @@ const SignInPage = () => {
         </svg>
       </div>
       <div className="flex gap-[52px] mt-[36px]">
-        <GoogleLogin />
-        <GoogleLogin />
-        <GoogleLogin />
+        <LoginCircle />
+        <LoginCircle />
+        <LoginCircle />
       </div>
     </section>
   );
