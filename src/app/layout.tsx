@@ -31,10 +31,10 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
-        <main className="h-screen pt-[80px]">
+        <main className="h-screen w-screen  pt-[80px]">
           <Header />
           <SideBar />
-          <section className="flex overflow-y-auto pl-[292px]">
+          <section className=" flex overflow-y-auto pl-[292px]">
             {children}
           </section>
           <Footer />

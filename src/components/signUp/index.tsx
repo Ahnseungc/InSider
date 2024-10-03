@@ -1,6 +1,7 @@
 'use client';
 
 import { FC } from 'react';
+import Link from 'next/link';
 import { Input } from '../common/input';
 
 const SignUpPage: FC = () => {
@@ -262,9 +263,11 @@ const SignUpPage: FC = () => {
           </div>
         </div>
         <div className="w-full flex justify-center items-center mt-[71px]">
-          <button className="w-[347px] h-[71px] rounded-[10px] bg-[#d9d9d9] text-lg font-bold text-white">
-            회원가입하기
-          </button>
+          <Link href={'/signup/success'}>
+            <button className="w-[347px] h-[71px] rounded-[10px] bg-[#d9d9d9] text-lg font-bold text-white hover:bg-main">
+              회원가입하기
+            </button>
+          </Link>
         </div>
       </form>
     </main>
