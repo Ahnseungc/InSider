@@ -34,21 +34,28 @@ const iconComponents: IconComponents = {
   NoChange,
 };
 
+//224
+//394
+//235
+
 export const SideBar = () => {
   return (
-    <aside className="fixed pl-[28px] flex gap-[26px] h-screen overflow-y-scroll">
-      <div className="flex flex-col gap-8 items-center pt-[47px]">
-        <div className="w-full">
+    <aside className="fixed pl-[28px] flex gap-[26px] h-screen">
+      <div className="flex flex-col items-center h-screen">
+        <div className="w-full pt-[47px]">
           <p className="text-[15px] text-left text-[#7e7e7e] mb-[24px]">
             <span className="text-[15px] font-bold text-left text-main">
               HOT
             </span>
             <span className="text-[15px] text-left text-[#7e7e7e]">토픽</span>
           </p>
-          <div className="mb-[28px] flex flex-col gap-[16px]">
+          <div className="flex flex-col gap-[16px] pb-[28px] ">
             {topicItem.map(item => {
               return (
-                <div key={item.no} className="flex relative items-center">
+                <div
+                  key={item.no}
+                  className="flex relative items-center max-h-[18px]"
+                >
                   <div>
                     <span className="text-[15px] font-bold text-left text-black mr-[12px]">
                       {item.no}
@@ -64,37 +71,45 @@ export const SideBar = () => {
               );
             })}
           </div>
+        </div>
+        <div className="w-full">
           <WidthLine />
         </div>
 
-        <div className="w-full">
+        <div className="w-full mt-[29px] mb-[22px]">
           <p className="text-[15px] text-left text-[#7e7e7e] mb-[19px]">
-            인싸이드 게시판(토론 주제)
+            인싸이드 게시판
           </p>
           <div className="flex flex-col gap-[24px]">
             {insiderItem.map(item => {
               return (
-                <div key={item.no} className="flex gap-[15px] items-center">
+                <div
+                  key={item.no}
+                  className="flex gap-[15px] items-center max-h-[18px]"
+                >
                   <span>{RenderIcon(item?.icon, iconComponents)}</span>
                   <span>{item.name}</span>
                 </div>
               );
             })}
           </div>
-          <p className="text-xs font-bold text-left text-main mt-[66px] mb-[22px]">
+          <p className="text-xs font-bold text-left text-main mt-[24px]">
             더보기
           </p>
+        </div>
+        <div className="w-full">
           <WidthLine />
         </div>
 
-        <div className="w-full">
-          <p className="text-[15px] text-left text-[#7e7e7e] mb-[18px] ">
-            힐링추천(자유)
-          </p>
-          <div className="flex flex-col gap-[24px]">
+        <div className="w-full pb-[27px] mt-[30px]">
+          <p className="text-[15px] text-left text-[#7e7e7e]">힐링추천</p>
+          <div className="flex flex-col gap-[24px] mt-[18px]">
             {HealingItem.map(item => {
               return (
-                <div key={item.no} className="flex gap-[15px] items-center">
+                <div
+                  key={item.no}
+                  className="flex gap-[15px] items-center max-h-[18px]"
+                >
                   <span>{RenderIcon(item?.icon, iconComponents)}</span>
                   <span>{item.name}</span>
                 </div>
@@ -123,6 +138,7 @@ const insiderItem = [
   { no: 4, name: '정치', icon: 'Politics' },
   { no: 5, name: '스포츠', icon: 'Sports' },
   { no: 6, name: '사회', icon: 'Society' },
+  { no: 7, name: '익명 자유', icon: 'Society' },
 ];
 
 const HealingItem = [
@@ -130,5 +146,5 @@ const HealingItem = [
   { no: 2, name: '반려동물', icon: 'Pet' },
   { no: 3, name: '무한위로', icon: 'Consolation' },
   { no: 4, name: '응원합시다', icon: 'Cheering' },
-  { no: 5, name: '익명 자유', icon: 'Freedom' },
+  // { no: 5, name: '익명 자유', icon: 'Freedom' },
 ];
