@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { FC } from 'react';
 import { SwitchCase } from '@toss/react';
 import LogInHeader from './LogInHeader';
@@ -8,7 +9,6 @@ import { LoginType } from '@/models';
 import { Input } from '@/components/common/input';
 import { FindIcon } from '@/components/common/Icon';
 import { InsiderLogo } from '@/components/common/Icon';
-import { useRouter } from 'next/navigation';
 
 export const Header: FC = () => {
   const login = 'logOut';

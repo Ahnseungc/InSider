@@ -1,53 +1,24 @@
+import { FC } from 'react';
+import Pagination from '../common/pagination';
 import PostBox from '@/components/post/postBox/index';
-import { SmallLeftArrow, SmallRightArrow } from '../common/Icon';
 
-const PostPageArticle = () => {
+interface PostPageArticleProps {
+  slug: string;
+}
+
+const PostPageArticle: FC<PostPageArticleProps> = ({ slug }) => {
   return (
-    <main className="pt-[33px] pl-[89px]">
+    <main className="w-full h-full pt-[33px] px-[89px]">
       <h1 className="text-2xl font-bold text-left text-[#242424]">
         토론 게시판
       </h1>
       <section className="flex flex-col w-full justify-center gap-[16px] pt-[19px]">
         {mock.map(item => {
-          return <PostBox key={item.id} />;
+          return <PostBox key={item.id} id={item.no} slug={slug} />;
         })}
       </section>
-      <footer className="w-full flex justify-center mt-[60px] items-center gap-[16px]">
-        <SmallLeftArrow active={false} />
-        <ul className="flex gap-[14px] items-center">
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            1
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            2
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            3
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            4
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            5
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            6
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            7
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            8
-          </li>
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            9
-          </li>
-
-          <li className="flex justify-center items-center w-[28px] h-[28px] rounded-[4.6px] text-lg font-bold text-left text-[#6a6a6a] hover:bg-main hover:text-white cursor-pointer">
-            10
-          </li>
-        </ul>
-        <SmallRightArrow active={false} />
+      <footer className="mt-[60px]">
+        <Pagination />
       </footer>
     </main>
   );
@@ -60,6 +31,10 @@ const mock = [
   { id: 4, no: 4 },
   { id: 5, no: 5 },
   { id: 6, no: 6 },
+  { id: 7, no: 7 },
+  { id: 8, no: 8 },
+  { id: 9, no: 9 },
+  { id: 10, no: 10 },
 ];
 
 export default PostPageArticle;
