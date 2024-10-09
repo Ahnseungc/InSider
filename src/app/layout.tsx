@@ -31,13 +31,15 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
-        <main className="h-screen w-screen  pt-[80px]">
+        <main>
           <Header />
-          <SideBar />
-          <section className=" flex overflow-y-auto pl-[292px]">
-            {children}
-          </section>
-          <Footer />
+          <div className="flex h-full">
+            <SideBar />
+            <div className="w-full">
+              <section className="flex overflow-y-auto">{children}</section>
+              <Footer />
+            </div>
+          </div>
         </main>
       </body>
     </html>

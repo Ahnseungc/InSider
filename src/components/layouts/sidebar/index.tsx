@@ -40,7 +40,7 @@ const iconComponents: IconComponents = {
 
 export const SideBar = () => {
   return (
-    <aside className="fixed pl-[28px] flex gap-[26px] h-screen">
+    <aside className="sticky top-20 pl-[28px] z-10 flex gap-[26px] h-screen">
       <div className="flex flex-col items-center h-screen">
         <div className="w-full pt-[47px]">
           <p className="text-[15px] text-left text-[#7e7e7e] mb-[24px]">

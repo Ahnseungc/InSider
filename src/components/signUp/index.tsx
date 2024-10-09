@@ -6,7 +6,7 @@ import { Input } from '../common/input';
 
 const SignUpPage: FC = () => {
   return (
-    <main className=" w-screen flex flex-col items-center">
+    <main className=" w-full h-full flex flex-col items-center">
       <div className="pt-[113px]">
         <h1 className="text-[32px] font-bold text-center text-[#242424]">
           회원가입

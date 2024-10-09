@@ -18,7 +18,7 @@ export const Header: FC = () => {
     router.push('/');
   };
   return (
-    <header className="flex w-screen h-20 items-center justify-between shadow-header fixed px-8 z-100 top-0 bg-white">
+    <header className="flex w-screen h-20 items-center justify-between shadow-header sticky px-8 z-50 top-0 bg-white">
       <div
         className="flex items-center gap-[10px] cursor-pointer"
         onClick={handleHome}

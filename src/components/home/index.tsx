@@ -8,7 +8,7 @@ import { LeftArrow, RightArrow } from '@/components/common/Icon';
 
 export const MainArticle: FC = () => {
   return (
-    <div className="w-full flex flex-col items-center pt-[40px]">
+    <div className="w-full flex flex-col items-center pt-[40px] pl-[22px]">
       <div className="">
         <section>
           <div>
