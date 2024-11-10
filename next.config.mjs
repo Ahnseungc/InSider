@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   distDir: '.next',
-
   webpack(config) {
     // svg
     config.module.rules.push({
