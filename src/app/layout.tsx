@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { RecoilRoot } from 'recoil';
 import { Header } from '@/components/layouts/header';
 import { Footer } from '@/components/layouts/footer';
 import { SideBar } from '@/components/layouts/sidebar';
 import ReactQuerySetting from '@/libraries/reactQuery/ReactQuerySetting';
 
 import './globals.css';
+import RecoilRootWrapper from '@/libraries/recoil/recoilWrapper';
 
 export const metadata: Metadata = {
   title: '인사이더',
@@ -33,20 +33,20 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: 'Pretendard, sans-serif' }}>
-        <ReactQuerySetting>
-          <RecoilRoot>
-            <main>
-              <Header />
-              <div className="flex h-full">
-                <SideBar />
-                <div className="w-full">
-                  <section className="flex overflow-y-auto">{children}</section>
-                  <Footer />
-                </div>
-              </div>
-            </main>
-          </RecoilRoot>
-        </ReactQuerySetting>
+        <main>
+          <Header />
+          <div className="flex h-full">
+            <SideBar />
+            <div className="w-full">
+              <section className="flex overflow-y-auto">
+                <ReactQuerySetting>
+                  <RecoilRootWrapper>{children}</RecoilRootWrapper>
+                </ReactQuerySetting>
+              </section>
+              <Footer />
+            </div>
+          </div>
+        </main>
       </body>
     </html>
   );

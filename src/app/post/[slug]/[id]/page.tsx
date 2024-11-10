@@ -103,7 +103,7 @@ const PostDetailPage = () => {
           </div>
         </section>
         <section className="mt-[24px] w-full">
-          <Input
+          {/* <Input
             id="search"
             type="text"
             onChange={() => null}
@@ -112,7 +112,7 @@ const PostDetailPage = () => {
             style={
               'w-full h-10 rounded-[20.5px] bg-[#f4f4f4] border-[1.5px] border-[#b0b0b0] placeholder:text-neutral-600 pl-[20px]'
             }
-          />
+          /> */}
           <CommentBox
             comment={
               '나는 요즘 어머님이라는 칭호를 엄마로 바꾸었다.이제까지의 어렵고 조심스러운 며느리의 자리에서 당신의 딸로 머물고 싶어서다. 두분 아니 계시면 이 세상 어디서 어머니, 아버지 부드럽고 다감한 부름을 불러 볼 수 있겠는가. 평생을 통하여 자식들에게 베풀기만 하셨으니 이제 남은 여생, 몸과 마음이 편하시도록 받들어 모실 일만 남았다.'

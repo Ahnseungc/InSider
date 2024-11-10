@@ -34,7 +34,7 @@ export const Header: FC = () => {
           <FindIcon />
         </div>
         <label htmlFor="search"></label>
-        <Input
+        {/* <Input
           id="search"
           type="text"
           onChange={() => null}
@@ -43,7 +43,7 @@ export const Header: FC = () => {
           style={
             'w-[557px] h-12 left-[680.25px] top-[11.25px] rounded-[32px] border-[1.5px] border-[#ff5c00] placeholder:text-neutral-600 placeholder:opacity-50 text-sm text-left placeholder:pl-[60px]'
           }
-        />
+        /> */}
       </div>
       <SwitchCase
         value={login as LoginType}

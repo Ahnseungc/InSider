@@ -7,7 +7,7 @@ const SignInPage = () => {
       <h1 className="text-[44px] font-bold text-left text-black">로그인</h1>
 
       <form className="flex flex-col gap-[21px] mt-[80px]">
-        <input
+        {/* <input
           type="text"
           className="w-[562px] h-14 rounded-[10px] border border-[#a6a6a6] pl-[21px]"
           placeholder="아이디를 입력해주세요."
@@ -16,12 +16,12 @@ const SignInPage = () => {
           type="text"
           className="w-[562px] h-14 rounded-[10px] border border-[#a6a6a6] pl-[21px]"
           placeholder="비밀번호를 입력해주세요."
-        />
+        /> */}
         <div className="flex items-center gap-[11px]">
-          <input
+          {/* <input
             type="checkbox"
             className="w-[23px] h-[23px] rounded border border-[#a6a6a6]"
-          />
+          /> */}
           <p className="text-[19px] font-medium text-left text-neutral-600">
             아이디 저장
           </p>
